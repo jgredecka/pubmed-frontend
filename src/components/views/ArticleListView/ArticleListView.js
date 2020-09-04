@@ -33,7 +33,7 @@ class ArticleListView extends React.Component {
 		let { term, retmax, ...summaryParams } = searchParams;
 
 		getBookmarks()
-		.then(response => this.setState({ bookmarks: response.data }))
+		.then(response => this.setState({ bookmarks: response.data })) //Get all bookmark PMIDs to show if article has already been bookmarked
 		.catch(error => console.log(error.response))
 
 		getPubmedIds(searchParams) //Fetch PMIDs for given term.
